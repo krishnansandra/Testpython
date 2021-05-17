@@ -1,0 +1,43 @@
+
+load static %}
+
+<html>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Event Management System</title>
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
+  <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/css/materialize.min.css"> -->
+
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Roboto+Mono:400,500,700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Muli:500&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="{% static 'css/index.css' %}">
+</head>
+
+<body class="bg-success">
+<div class="container-fluid header text-center bg-primary">
+  <h1 style="color: white;">CHMSC Events Management System</h1>
+  <h3 style="color: white;"> Welcome {{ name }} </h3>
+  <a href="{% url 'scmapp:user_logout' %}" style="font-size:20; color: white;">Logout</a><br>
+  <span style="font-size:18px">{{ status }}</span>
+</div>
+
+<div class="container">
+  <div class="row">
+    <div class="col-lg-6">
+      <a href="{% url 'scmapp:user_event' %}">
+      <div class="card bg-danger">
+        <img src="{% static 'res/event.jpeg' %}" class="card bg-danger">
+        <img src="{% static 'res/event.jpeg' %}">
+        <div class="card-title text-center" style="color: white;">Events</div>
+      </div>
+      </a>
+    </div>
+
+    <div class="col-lg-6">
+      <a href="{% url 'scmapp:ground_booking' %}">
+      <div cla
